@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { background: #0E1210; color: #fff; -webkit-tap-highlight-color: transparent; }
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-[52px] items-center justify-center rounded-xl px-6 text-base font-bold transition-colors
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime;
+  }
+  .btn-primary { @apply bg-lime text-ink hover:bg-lime-600; }
+  .btn-ghost { @apply border border-ink-600 text-white hover:bg-ink-700; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
